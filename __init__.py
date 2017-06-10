@@ -2,14 +2,13 @@ if __name__ == '__main__':
     print('Hello Wereld')
 
 import pyodbc
-cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=SQLExpress;DATABASE=WifiMonitor;UID=me;PWD=pass')
+cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=SQLExpress;DATABASE=WifiMonitor')
 cursor = cnxn.cursor()
-cursor.execute("select user_id, user_name from users")
+cursor.execute("select PersonId, LastName from users")
 rows = cursor.fetchall()
 for row in rows:
-    print row.user_id, row.user_name
+    print row.PersonId, row.LastName
     
-
 
 import fritzconnection as fc
 print(fc.get_version())
