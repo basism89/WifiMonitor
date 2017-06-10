@@ -2,6 +2,8 @@ if __name__ == '__main__':
     print('Hello World')
 
 
+
+
 import fritzconnection as fc
 print(fc.get_version())
 
@@ -30,10 +32,10 @@ print(status.max_byte_rate)
 
 
 
-print(fw.get_version())
-print(wlan.modelname)
-hostinfo = wlan.get_hosts_info()
-print(hostinfo)
+#print(fw.get_version())
+#print(wlan.modelname)
+#hostinfo = wlan.get_hosts_info()
+#print(hostinfo)
 
 
 
